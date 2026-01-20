@@ -16,8 +16,8 @@ Feature: User Registration
 
     Examples:
       | username | email           | password |
-      | eric170   | eric27@test.com | 12345    |
-      | john170   | john17@test.com | 12345    |
+      | eric170  | eric27@test.com | 12345    |
+      | john170  | john17@test.com | 12345    |
 
   @registration @negative
   Scenario Outline: Registration fails due to invalid input
@@ -29,7 +29,7 @@ Feature: User Registration
 
     Examples:
       | username | email            | password | error_message                          |
-      |          | eric270@test.com  | 12345    | Please enter a valid account username. |
-      | eric17   | invalid-email    | 12345    | Please provide a valid email address.  |
-      | eric17   | eric27@test.com  |          | Please enter an account password.      |
+      |          | eric10@test.com | 12345    | Please enter a valid account username. |
+      | eric10   | invalid-email    | 12345    | Please provide a valid email address.  |
+      | eric10   | eric27@test.com  |          | Please enter an account password.      |
       | existing | admin@test.com   | 12345    | An account is already registered.      |
